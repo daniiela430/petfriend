@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.4.css">
+        <!--  <link rel="stylesheet" type="text/css" href="css/index.css" /> -->
+        <title>Hello World</title>
+    </head>
+    <body>
+
+        <!-- START -->
+		
+		
+		
+        <div data-role="page" id="paginaInicio" data-theme="a" >
+            <div  data-role="header" >
+				<script type="text/javascript">
+					//function menu(){
+					// document.write("<fieldset data-role="+"controlgroup"+" data-type="+"horizontal"+" > <input type="+"search"+"id="+"inputSearch"+" > <a href="+"#panelMenu" + "> <input type="+"button"+" data-icon="+"bars"+" value="+"Icon only"+" data-iconpos="+"notext"+"> </a>  ");
+					 
+				    //} menu();
+				</script>
+			
+			
+                   <fieldset data-role="controlgroup" data-type="horizontal" >
+					<input type="search" id="inputSearch" > 
+					<a href="#panelMenu"><input type="button" data-icon="bars" value="Icon only" data-iconpos="notext"></a>
+				</fieldset>		
+				<div data-role="panel" id="panelMenu" data-position-fixed="true" data-display="overlay" data-position="left" data-swipe-close="false">
+					<ul data-role="listview">
+						<li>123456</li>
+						<li>223456</li>
+						<li>323456</li>
+					</ul>
+				</div> 
+			</div><!-- /header -->
+			
+            <div data-role="content"  >
+                Correo:
+                <input id="inputCorreo" type="text" placeholder="alguien@correo.com">
+
+                Clave:
+                <input id="inputClave" type="password" >
+
+                <input id="btnIniciarSesion" type="button" value="Iniciar sesiÃ³n">
+                <input id="btnRegistrarse" type="button" value="Registrarse">
+            </div>
+
+            <div data-role="footer"  >
+                Pata
+            </div> <!-- /footer -->
+        </div><!-- /start -->
+
+        <!-- HOME -->
+        <div data-role="page" id="paginaHome" data-theme="a" >
+            <div  data-role="header">
+                <fieldset data-role="controlgroup" data-type="horizontal" >
+					<input type="search" id="inputSearch"> 
+					<input type="button" data-icon="bars" value="Icon only" data-iconpos="notext" >
+				</fieldset>		
+				<h1>Home</h1>
+            </div><!-- /header -->
+
+            <div data-role="content"  >
+				<ul data-role="listview">
+			
+					<li><a href="#paginaMapa" id="menuMapa">Mapa</a></li>
+					<li><a href="#paginaReportarComoPerdido" id="menuReportarComoPerdido">Reportar como perdido</a></li>
+					<li><a href="#paginaPerdidos" id="menuPerdidos">Perdidos</a></li>
+					<li><a href="#" id="menutracker">Tracker</a></li>
+					<li><a href="#paginaDirectorio" id="menuDirectorio">Directorio</a></li>
+					<li><a href="#paginaRegistroMascotas" id="registrarMascota">Registrar Mascota</a></li>
+				</ul>	
+            </div>
+
+            <div data-role="footer"  >
+                Pata
+				
+				
+            </div> <!-- /footer -->
+        </div><!-- /HOME -->
+
+        <div data-role="page" id="paginaRegistro" data-theme="a">
+            <div data-role="header">
+                Tracker v1 - Registro
+            </div>
+
+            <div data-role="content">
+
+                Nombre:
+                <input id="inputNombre" type="text" >
+
+                Correo:
+                <input id="inputCorreo" type="text" placeholder="alguien@correo.com">
+
+                ContraseÃ±a:
+                <input id="inputContraseÃ±a" type="password" >
+
+                Repetir contraseÃ±a:
+                <input id="inputRepetirContraseÃ±a" type="password" >
+                <input id="btnHecho" type="button"  value="Hecho" >
+
+            </div>
+
+            <div data-role="footer"  >
+                Pata
+            </div>
+
+        </div>
+
+        <div data-role="page" id="paginaRegistroMascotas" data-theme="a">
+            <div data-role="header" >
+                Tracker v1 - Registro Mascotas
+            </div>
+
+            <div data-role="content">
+                Nombre:
+                <input id="inputNombreMascota" type="text" >
+                Animal:
+                <fieldset data-role="controlgroup" data-type="horizontal">
+
+                    <input type="radio" name="Animal" id="opPerro" value="Perro" checked="checked" />
+                    <label for="opPerro">Perro</label>
+
+                    <input type="radio" name="Animal" id="opGato" value="Gato"  />
+                    <label for="opGato">Gato</label>
+
+                </fieldset>
+
+                Raza:
+                    <select name="raza" id="razaSeleccionada">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+
+                Sexo:
+                <fieldset data-role="controlgroup" data-type="horizontal">
+
+                    <input type="radio" name="sexoAnimal" id="opMacho" value="macho" checked="checked" />
+                    <label for="opMacho">Macho</label>
+
+                    <input type="radio" name="sexoAnimal" id="opHembra" value="hembra"  />
+                    <label for="opHembra">Hembra</label>
+                </fieldset>
+
+                Fecha de Nacimiento:
+                <input type="date">
+
+                <input type="button" id="btnHechoRegistroMascotas" value="Hecho">
+
+            </div>
+
+            <div data-role="footer">
+                Pata
+            </div>
+			
+        </div>
+
+		<div data-role="page" id="paginaMapa" >
+		
+			<div data-role="header" data-theme="a">
+				<fieldset data-role="controlgroup" data-type="horizontal" >
+					<input type="search" id="inputSearch"> 
+					<input type="button" data-icon="bars" value="Icon only" data-iconpos="notext" >
+				</fieldset>		
+				<h1>Maps</h1>
+			</div>
+			<div data-role="content"  >
+			<!-- Mapa -->
+				<style> 
+					#map-canvas{ 
+					width:100%; 
+					height:400px
+					} 
+				</style> 
+				<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+				<div id="map-canvas"></div>
+			<script type="text/javascript" src="phonegap.js"></script>
+			 <script> 
+                var map;
+            var myLatlng;
+            function initialize(lat,long) {
+                myLatlng = new google.maps.LatLng(lat, long);
+                var mapOptions = {
+                    zoom: 8,
+                    center: myLatlng
+                };
+                
+                map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
+                
+                var marker = new google.maps.Marker({
+                    position: myLatlng,
+                    map: map,
+                    title: 'Mi punto en el mapa'
+                });
+                
+            }
+
+            document.addEventListener("deviceready", onDeviceReady, false);
+            
+            function onDeviceReady() {
+                navigator.geolocation.getCurrentPosition(onSuccess, onError);
+            }
+            
+            function onSuccess(position) {
+                initialize(position.coords.latitude,position.coords.longitude);
+            }
+                      
+            function onError(error) {
+                alert('code: '    + error.code    + '\n' + 'message: ' + error.message + '\n');
+            }
+        </script> 
+		
+			
+			<!-- /Mapa -->
+			</div>
+			 <div data-role="footer"  >
+                Pata
+            </div> <!-- /footer -->
+			
+		</div>
+		
+		
+		<div data-role="page" id="paginaPerdidos" data-theme="a">
+			<div  data-role="header">
+                <fieldset data-role="controlgroup" data-type="horizontal" >
+					<input type="search" id="inputSearch"> 
+					<input type="button" data-icon="bars" value="Icon only" data-iconpos="notext" >
+				</fieldset>		
+				<h1>Perdidos</h1>		
+            </div><!-- /header -->
+			
+			<div data-role="content"  >
+						<!-- TABS -->
+				<div data-role="tabs" id="tabs">
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#cerca" data-ajax="false">Cerca de mi</a></li>
+							<li><a href="#ultimaVista" data-ajax="false">Ultima vista</a></li>
+						</ul>
+					</div>
+					
+					<div id="cerca" class="ui-content">
+						<h1> hola </h1>
+					</div>
+  
+					<div id="ultimaVista" class="ui-content">
+						<h1> chao </h1>
+					</div>
+				</div>
+  
+			
+			
+			</div>
+			
+			 <div data-role="footer">
+                Pata
+            </div> <!-- /footer -->
+		</div>
+
+		
+		<div data-role="page" id="paginaReportarComoPerdido" data-theme="a">
+			<div  data-role="header">
+                <fieldset data-role="controlgroup" data-type="horizontal" >
+					<input type="search" id="inputSearch"> 
+					<input type="button" data-icon="bars" value="Icon only" data-iconpos="notext" >
+				</fieldset>	
+				<h1>Reportar como perdido</h1>		
+            </div><!-- /header -->
+			
+			<div data-role="content"  >
+			</div>
+			
+			 <div data-role="footer"  >
+                Pata
+            </div> <!-- /footer -->
+		</div>
+			
+		<div data-role="page" id="paginaDirectorio" data-theme="a">
+			<div  data-role="header">
+                <fieldset data-role="controlgroup" data-type="horizontal" >
+					<input type="search" id="inputSearch"> 
+					<input type="button" data-icon="bars" value="Icon only" data-iconpos="notext" >
+				</fieldset>	
+				<h1>Directorio</h1>		
+            </div><!-- /header -->
+			
+			<div data-role="content"  >
+				<ul data-role="listview" data-inset="true">
+					<li><a href="#paginaDirectorioHoteles" > <img id="imgHoteles" src="#" /> <h2>Hoteles</h2> <p>hoteles</p> </a> </li>
+					<li><a href="#paginaDirectorioParques" > <img id="imgParques" src="#" /> <h2>Parques</h2> <p>parques</p> </a> </li>
+					<li><a href="#paginaDirectorioRestaurantes"> <img id="imgRestaurantes" src="#" /> <h2>Restaurantes</h2> <p>restaurantes</p> </a> </li>
+					<li><a href="#paginaDirectorioVeterinario" > <img id="Veterinario" src="#" /> <h2> Veterinarios</h2> <p>veterinarios</p> </a> </li>
+					
+				</ul>
+			</div>
+			 <div data-role="footer"  >
+                Pata
+            </div> <!-- /footer -->
+		</div>
+		
+		
+		<div data-role="page" id="paginaDirectorioHoteles" data-theme="a">
+			<div  data-role="header">
+                <fieldset data-role="controlgroup" data-type="horizontal" >
+					<input type="search" id="inputSearch"> 
+					<input type="button" data-icon="bars" value="Icon only" data-iconpos="notext" >
+				</fieldset>	
+				<h1>Directorio hoteles</h1>		
+            </div><!-- /header -->
+			
+			<div data-role="content"  >
+			</div>
+			 <div data-role="footer"  >
+                Pata
+            </div> <!-- /footer -->
+		</div>
+		
+		<div data-role="page" id="paginaDirectorioParques" data-theme="a">
+			<div  data-role="header">
+                <fieldset data-role="controlgroup" data-type="horizontal" >
+					<input type="search" id="inputSearch"> 
+					<input type="button" data-icon="bars" value="Icon only" data-iconpos="notext" >
+				</fieldset>	
+				<h1>Directorio parques</h1>		
+            </div><!-- /header -->
+			
+			<div data-role="content"  >
+			</div>
+			 <div data-role="footer"  >
+                Pata
+            </div> <!-- /footer -->
+		</div>
+		
+		<div data-role="page" id="paginaDirectorioRestaurantes" data-theme="a">
+			<div  data-role="header">
+                <fieldset data-role="controlgroup" data-type="horizontal" >
+					<input type="search" id="inputSearch"> 
+					<input type="button" data-icon="bars" value="Icon only" data-iconpos="notext" >
+				</fieldset>	
+				<h1>Directorio restaurantes</h1>		
+            </div><!-- /header -->
+			
+			<div data-role="content"  >
+			</div>
+			 <div data-role="footer"  >
+                Pata
+            </div> <!-- /footer -->
+		</div>
+		
+		<div data-role="page" id="paginaDirectorioVeterinario" data-theme="a">
+			<div  data-role="header">
+                <fieldset data-role="controlgroup" data-type="horizontal" >
+					<input type="search" id="inputSearch"> 
+					<input type="button" data-icon="bars" value="Icon only" data-iconpos="notext" >
+				</fieldset>	
+				<h1>Directorio Veterinario</h1>		
+            </div><!-- /header -->
+			
+			<div data-role="content"  >
+			</div>
+			 <div data-role="footer"  >
+                Pata
+            </div> <!-- /footer -->
+		</div>
+		
+		
+        <script src="js/jquery.js"></script>
+        <script src="js/jquery.mobile-1.4.4.js"></script>
+        <script type="text/javascript" src="phonegap.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>
