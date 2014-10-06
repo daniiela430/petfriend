@@ -18,8 +18,35 @@
  */
  $(document).ready(function(){
 
-    $("#btnIniciarSesion").click(function(){
-        $.mobile.changePage("#paginaHome",{transition:"none"});
+     $("#btnIniciarSesion").click(function () {
+
+         var correo = $("#inputCorreo").val();
+         var clave = $("#inputClave").val();
+
+         //http://www.mocky.io/v2/5432d979dd22b44b083eb8dc - false
+         //http://www.mocky.io/v2/542c78c81c4e97120f338aa7 - true
+
+         $.ajax({
+             url: "http://www.mocky.io/v2/5432d979dd22b44b083eb8dc",
+             dataType: "jsonp",
+             type: "POST",
+             data: { correo: correo, clave: clave },
+             success: function (data) {
+
+             },
+             error: function () {
+                 alert("Error iniciando sesión");
+             }
+         })
+         .then(function (response) {
+             if (response.respuesta && response.respuesta == "true") {
+                 $.mobile.changePage("#paginaHome", { transition: "none" });
+             } else {
+                 alert("Correo o clave inválidos");
+             }
+         });
+
+        
     });
 
     $("#btnRegistrarse").click(function(){
