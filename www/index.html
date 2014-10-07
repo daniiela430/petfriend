@@ -49,11 +49,11 @@
 			</div><!-- /header -->
 			
             <div data-role="content"  >
-                Correo:
-                <input id="inputCorreo" type="text" placeholder="alguien@correo.com">
+                <label for="inputCorreoInicio">Correo:</label>
+                <input id="inputCorreoInicio" placeholder="alguien@correo.com" type="email" data-clear-btn="true" maxlength="80">
 
-                Clave:
-                <input id="inputClave" type="password" >
+                <label for="inputClave">Correo:</label>
+                <input id="inputClave" type="password" data-clear-btn="true" maxlength="20" >
 
                 <input id="btnIniciarSesion" type="button" value="Iniciar sesi&oacute;n">
                 <input id="btnRegistrarse" type="button" value="Registrarse">
@@ -99,27 +99,112 @@
             </div>
 
             <div data-role="content">
+                Información personal
+                <div data-role="fieldcontain" class="ui-hide-label">
 
-                Nombre:
-                <input id="inputNombre" type="text" >
+                    <label for="inputNombre">Nombre:</label>
+                    <input id="inputNombre" type="text" maxlength="50" data-clear-btn="true" name="inputNombre" placeholder="nombre" value="">
 
-                Correo:
-                <input id="inputCorreo" type="text" placeholder="alguien@correo.com">
+                    <label for="inputCorreo">Correo:</label>
+                    <input id="inputCorreo" name="inputCorreo" type="email" placeholder="correo" data-clear-btn="true" maxlength="80">
+                    
+                    Fecha de nacimiento:
+                    <label for="inputFechaNacimiento">Fecha de nacimiento:</label>
+                    <input id="inputFechaNacimiento" name="inputFechaNacimiento" type="date" data-clear-btn="true" >
+                
 
-                ContraseÃ±a:
-                <input id="inputContrasena" type="password" >
+                    <label for="inputContrasena">Contraseña:</label>
+                    <input id="inputContrasena" name="inputContrasena" type="password" data-clear-btn="true" maxlength="20"  placeholder="contraseña">
+                
+                    <label for="inputConfirmarContrasena">Confirmar contraseña:</label>
+                    <input id="inputConfirmarContrasena" name="inputConfirmarContrasena" type="password" data-clear-btn="true" maxlength="20" placeholder="confirmar contraseña">
+                </div>
+                <br />
+                Infromación mascota
+                <div data-role="fieldcontain" class="ui-hide-label">
+                    
+                    <label for="inputNombreMascotaRegistro">Nombre:</label>
+                    <input id="inputNombreMascotaRegistro" name="inputNombreMascotaRegistro" type="text" maxlength="50" data-clear-btn="true" placeholder="nombre mascota">
 
-                Repetir contraseÃ±a:
-                <input id="inputRepetirContrasena" type="password" >
-                <input id="btnHecho" type="button"  value="Hecho" >
+                    
+                    <!--<label for="inputTipoMascota">Tipo:</label>
+                    <input id="inputTipoMascota" type="text" maxlength="20" data-clear-btn="true">-->
+                    
+                    Tipo:
+                    <fieldset data-role="controlgroup" data-type="horizontal">
+                        <legend>Tipo:</legend>
+                            
+                            <input type="radio" name="tipoMacota" id="radioPerro" value="Perro" checked="checked" />
+                            <label for="radioPerro">Perro</label>
 
-            </div>
+                            
+                            <input type="radio" name="tipoMacota" id="radioGato" value="Gato"  />
+                            <label for="radioGato">Gato</label>
+                    </fieldset>   
 
+                    Genero:
+                    <fieldset data-role="controlgroup" data-type="horizontal">
+                        <legend>Genero:</legend>
+                            
+                            <input type="radio" name="generoMacota" id="radioHembra" value="1" checked="checked" />
+                            <label for="radioHembra">Hembra</label>
+
+                            
+                            <input type="radio" name="generoMacota" id="radioMacho" value="2"  />
+                            <label for="radioMacho">Macho</label>
+
+                    </fieldset>   
+
+                    Criollo:
+                    <fieldset data-role="controlgroup" data-type="horizontal">
+                        <legend>Criollo:</legend>
+                            
+                            <input type="radio" name="criolla" id="mascotaCriolla" value="true" checked="checked" />
+                            <label for="mascotaCriolla">Si</label>
+
+                            
+                            <input type="radio" name="criolla" id="MascotaNoCriolla" value="false"  />
+                            <label for="MascotaNoCriolla">No</label>
+
+                    </fieldset>   
+                    <label for="inputRazaDominante">Tipo:</label>
+                    <input id="inputRazaDominante" type="text" maxlength="30" data-clear-btn="true" placeholder="raza dominante">
+
+                    <label for="tArearCaracteristicasUnicas">Características únicas:</label>
+	                <textarea name="tArearCaracteristicasUnicas" id="tArearCaracteristicasUnicas" maxlength="200" placeholder="características únicas" ></textarea>
+
+                    <label for="inputColor">Color:</label>
+                    <input id="inputColor" type="text" maxlength="20" data-clear-btn="true" placeholder="color">
+
+                    Fecha de nacimiento mascota:
+                    <label for="inputFechaNacimientoMascota">Fecha de nacimiento mascota:</label>
+                    <input id="inputFechaNacimientoMascota" name="inputFechaNacimientoMascota" type="date" data-clear-btn="true" >
+
+                    
+                    <label for="inputTemperamento">Temperamento:</label>
+                    <input id="inputTemperamento" name="inputTemperamento" type="text" data-clear-btn="true" placeholder="temperamento" maxlength="20" >
+
+
+
+                </div>
+
+
+                    <input id="btnHecho" type="button"  value="Hecho" >
+
+
+
+
+                </div>
+            
+                
             <div data-role="footer"  >
                 Pata
             </div>
-
         </div>
+
+        
+
+
 
         <div data-role="page" id="paginaRegistroMascotas" data-theme="a">
             <div data-role="header" >
