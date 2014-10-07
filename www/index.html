@@ -30,30 +30,22 @@
     <body>
 
         <!-- START -->
-		
-		
-		
-        <div data-role="page" id="paginaInicio" data-theme="a" >
+	
+            <div data-role="page" id="paginaInicio" data-theme="a" >
             <div  data-role="header" >
-				<script type="text/javascript">
-					//function menu(){
-					// document.write("<fieldset data-role="+"controlgroup"+" data-type="+"horizontal"+" > <input type="+"search"+"id="+"inputSearch"+" > <a href="+"#panelMenu" + "> <input type="+"button"+" data-icon="+"bars"+" value="+"Icon only"+" data-iconpos="+"notext"+"> </a>  ");
-					 
-				    //} menu();
-				</script>
-			
-			
+				
                    <fieldset data-role="controlgroup" data-type="horizontal" >
 					<input type="search" id="inputSearch" > 
 					<a href="#panelMenu"><input type="button" data-icon="bars" value="Icon only" data-iconpos="notext"></a>
 				</fieldset>		
-				<div data-role="panel" id="panelMenu" data-position-fixed="true" data-display="overlay" data-position="left" data-swipe-close="false">
+                  <div data-role="panel" id="panelMenu" data-position-fixed="true" data-display="overlay" data-position="left" data-swipe-close="false">
 					<ul data-role="listview">
 						<li>123456</li>
 						<li>223456</li>
 						<li>323456</li>
 					</ul>
-				</div> 
+	    </div> 
+				
 			</div><!-- /header -->
 			
             <div data-role="content"  >
@@ -85,12 +77,12 @@
             <div data-role="content"  >
 				<ul data-role="listview">
 			
-					<li><a href="#paginaMapa" id="menuMapa">Mapa</a></li>
-					<li><a href="#paginaReportarComoPerdido" id="menuReportarComoPerdido">Reportar como perdido</a></li>
-					<li><a href="#paginaPerdidos" id="menuPerdidos">Perdidos</a></li>
-					<li><a href="#" id="menutracker">Tracker</a></li>
-					<li><a href="#paginaDirectorio" id="menuDirectorio">Directorio</a></li>
-					<li><a href="#paginaRegistroMascotas" id="registrarMascota">Registrar Mascota</a></li>
+					<li><a  id="menuMapa">Mapa</a></li>
+					<li><a  id="menuReportarComoPerdido">Reportar como perdido</a></li>
+					<li><a  id="menuPerdidos">Perdidos</a></li>
+					<li><a  id="menutracker">Tracker</a></li>
+                    <li><a  id="menuDirectorio"> Directorio</a></li>
+					<li><a  id="registrarMascota">Registrar Mascota</a></li>
 				</ul>	
             </div>
 
@@ -188,13 +180,8 @@
 			</div>
 			<div data-role="content"  >
 			<!-- Mapa -->
-				<style> 
-					#map-canvas{ 
-					width:100%; 
-					height:400px
-					} 
-				</style> 
-				<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+                
+			 	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 				<div id="map-canvas" style="width:100%;height:400px"></div>
 			<script type="text/javascript" src="phonegap.js"></script>
 			 <script> 
@@ -308,10 +295,10 @@
 			
 			<div data-role="content"  >
 				<ul data-role="listview" data-inset="true">
-					<li><a href="#paginaDirectorioHoteles" > <img id="imgHoteles" src="#" /> <h2>Hoteles</h2> <p>hoteles</p> </a> </li>
-					<li><a href="#paginaDirectorioParques" > <img id="imgParques" src="#" /> <h2>Parques</h2> <p>parques</p> </a> </li>
-					<li><a href="#paginaDirectorioRestaurantes"> <img id="imgRestaurantes" src="#" /> <h2>Restaurantes</h2> <p>restaurantes</p> </a> </li>
-					<li><a href="#paginaDirectorioVeterinario" > <img id="Veterinario" src="#" /> <h2> Veterinarios</h2> <p>veterinarios</p> </a> </li>
+					<li><a id="directorioHoteles" > <img id="imgHoteles" src="#" /> <h2>Hoteles</h2> <p>hoteles</p> </a> </li>
+					<li><a id="directorioParques"> <img id="imgParques" src="#" /> <h2>Parques</h2> <p>parques</p> </a> </li>
+					<li><a id="directorioRestaurantes"> <img id="imgRestaurantes" src="#" /> <h2>Restaurantes</h2> <p>restaurantes</p> </a> </li>
+					<li><a id="directorioVeterinario" > <img id="Veterinario" src="#" /> <h2> Veterinarios</h2> <p>veterinarios</p> </a> </li>
 					
 				</ul>
 			</div>

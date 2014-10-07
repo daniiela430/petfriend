@@ -18,6 +18,30 @@
  */
  $(document).ready(function(){
 
+     $(document).on("pageinit", "#paginaInicio", function () {
+        
+        $.ajax({
+             url: "http://www.mocky.io/v2/5432de96dd22b4c1083eb8e1",
+             dataType: "jsonp",
+             type: "POST",
+             data: { text: "" },
+             success: function (data) {
+
+             },
+             error: function (a, b, c) {
+                 alert("Error recuperando mascotas");
+             }
+         })
+                    .then(function (response) {
+
+                        $.each(response, function (i, val) {
+                            console.log(val.nombre);
+                        });
+                        
+                    });
+
+     });
+
      $("#btnIniciarSesion").click(function () {
 
          var correo = $("#inputCorreo").val();
@@ -25,9 +49,10 @@
 
          //http://www.mocky.io/v2/5432d979dd22b44b083eb8dc - false
          //http://www.mocky.io/v2/542c78c81c4e97120f338aa7 - true
+         //http://www.mocky.io/v2/5432de96dd22b4c1083eb8e1 - listado
 
          $.ajax({
-             url: "http://www.mocky.io/v2/5432d979dd22b44b083eb8dc",
+             url: "http://www.mocky.io/v2/542c78c81c4e97120f338aa7",
              dataType: "jsonp",
              type: "POST",
              data: { correo: correo, clave: clave },
@@ -47,7 +72,8 @@
          });
 
         
-    });
+     });
+
 
     $("#btnRegistrarse").click(function(){
         $.mobile.changePage("#paginaRegistro",{transition:"none"});
@@ -61,31 +87,48 @@
 	
 	$("#menuMapa").click(function(){
         $.mobile.changePage("#paginaMapa",{transition:"none"});
-    });
+	});
+
+	$("#menuReportarComoPerdido").click(function () {
+	    $.mobile.changePage("#paginaReportarComoPerdido", { transition: "none" });
+	});
+
 	
 	$("#menuPerdidos").click(function(){
         $.mobile.changePage("#paginaPerdidos",{transition:"none"});
     });
 	
+     //FALTA PAGINA TRAKER
+	$("#menutracker").click(function () {
+	    $.mobile.changePage("#paginaPerdidos", { transition: "none" });
+	});
 
-	
+	$("#menuDirectorio").click(function () {
+	    $.mobile.changePage("#paginaDirectorio", { transition: "none" });
+	});
+
+     $("#registrarMascota").click(function () {
+         $.mobile.changePage("#paginaRegistroMascotas", { transition: "none" });
+	});
+
+     $("#directorioHoteles").click(function () {
+         $.mobile.changePage("#paginaDirectorioHoteles", { transition: "none" });
+     });
+
+     $("#directorioParques").click(function () {
+         $.mobile.changePage("#paginaDirectorioParques", { transition: "none" });
+     });
+
+     $("#directorioRestaurantes").click(function () {
+         $.mobile.changePage("#paginaDirectorioRestaurantes", { transition: "none" });
+     });
+
+     $("#directorioVeterinario").click(function () {
+         $.mobile.changePage("#paginaDirectorioVeterinario", { transition: "none" });
+     });
+
+    	
 });
-
-function menu(){
-var d = new Date();
-   d.setFullYear("1990");
-   document.write(d);
-   }
-
-
-
-
-
-   
-
-
-
-
 
 var app = {
     // Application Constructor
