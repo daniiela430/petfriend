@@ -74,6 +74,36 @@
         
      });
 
+     $(document).on("pageinit", "#paginaDirectorioHoteles", function () {
+
+         $.ajax({
+             url: "http://www.mocky.io/v2/54357e9a78a8a72f07071e7a",
+             dataType: "jsonp",
+             type: "POST",
+             data: { text: "" },
+             success: function (data) {
+
+             },
+             error: function (a, b, c) {
+                 alert("Error cargando hoteles");
+             }
+         })
+             .then(function (response) {
+
+
+                 $("#hotel").append("<ul data-role='listview' data-inset='true'>");
+
+                 $.each(response, function (i, val) {
+                     $("#hotel").append("<li><a > <img  src='#' /> <h2>"+val.nombre+"</h2> <p>"+val.direccion+"</p> </a> </li>");
+
+                 });
+                 $("#hotel").append("</ul>");
+
+
+             });
+
+     });
+
 
     $("#btnRegistrarse").click(function(){
         $.mobile.changePage("#paginaRegistro",{transition:"none"});
